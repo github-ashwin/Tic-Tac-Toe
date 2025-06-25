@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+
+    <!-- PyScript runtime -->
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2024.5.1/core.css" />
+    <script type="module"
+            src="https://pyscript.net/releases/2024.5.1/core.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section>
+    <h1 class="game--title">Tic Tac Toe</h1>
+
+    <!-- Mode selector -->
+    <div class="mode">
+        <label><input type="radio" name="mode" value="pvp" checked /> Player&nbsp;vs&nbsp;Player</label>
+        <label><input type="radio" name="mode" value="ai"  /> Player&nbsp;vs&nbsp;Computer</label>
+    </div>
+
+    <!-- 3 × 3 board -->
+    <div class="game--container" id="board">
+        <!-- nine empty cells -->
+        <div class="cell" data-idx="0"></div><div class="cell" data-idx="1"></div><div class="cell" data-idx="2"></div>
+        <div class="cell" data-idx="3"></div><div class="cell" data-idx="4"></div><div class="cell" data-idx="5"></div>
+        <div class="cell" data-idx="6"></div><div class="cell" data-idx="7"></div><div class="cell" data-idx="8"></div>
+    </div>
+
+    <h3 id="status" class="game--status">Player X's turn</h3>
+    <button id="reset" class="game--restart">Restart Game</button>
+</section>
+
+<!-- Python logic -->
+<py-script src="game.py"></py-script>
+</body>
+</html>
